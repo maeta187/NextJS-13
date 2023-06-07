@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Button from '@/components/Button'
 
 const Form = () => {
   const [userId, setUserId] = useState<string>('')
@@ -14,7 +15,7 @@ const Form = () => {
   }
 
   return (
-    <div>
+    <form action=''>
       <div>
         <label htmlFor='user-id'>UserID</label>
         <input
@@ -33,7 +34,8 @@ const Form = () => {
           onChange={handleUserNameChange}
         />
       </div>
-    </div>
+      <Button text='Click' handleClick={handleSubmit} />
+    </form>
   )
 }
 
