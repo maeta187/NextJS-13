@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Button from '@/components/Button'
+import { users } from '@/mock'
 
 const Form = () => {
   const [userId, setUserId] = useState<string>('')
@@ -12,6 +13,11 @@ const Form = () => {
 
   const handleUserNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUserName(e.target.value)
+  }
+
+  const handleSubmit = () => {
+    const user = users.find((user) => user.id === Number(userId))
+    console.log(user)
   }
 
   return (
