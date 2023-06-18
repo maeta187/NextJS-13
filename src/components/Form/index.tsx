@@ -3,9 +3,16 @@ import { useState } from 'react'
 import Button from '@/components/Button'
 import { users } from '@/mock'
 
+type User = {
+  id: number
+  name: string
+}
+
 const Form = () => {
+  const [userState, setUserState] = useState<User>({} as User)
   const [userId, setUserId] = useState<string>('')
   const [userName, setUserName] = useState<string>('')
+  const [displayFlag, setDisplayFlag] = useState<boolean>(false)
 
   const handleUserIdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUserId(e.target.value)
@@ -16,8 +23,15 @@ const Form = () => {
   }
 
   const handleSubmit = () => {
-    const user = users.find((user) => user.id === Number(userId))
-    console.log(user)
+    const result = users.find(
+      (result) => result.id === Number(userId) || result.name === userName
+    )
+    if (result) {
+      setUserState(result)
+    } else {
+      console.warn('User not found')
+    }
+    setDisplayFlag(!!result)
   }
 
   return (
