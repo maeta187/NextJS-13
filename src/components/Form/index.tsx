@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Button from '@/components/Button'
+import User from '@/components/User'
 import { users } from '@/mock'
 
 type User = {
@@ -35,27 +36,30 @@ const Form = () => {
   }
 
   return (
-    <form action=''>
-      <div>
-        <label htmlFor='user-id'>UserID</label>
-        <input
-          id='user-id'
-          type='text'
-          value={userId}
-          onChange={handleUserIdChange}
-        />
-      </div>
-      <div>
-        <label htmlFor='user-name'>UserName</label>
-        <input
-          id='user-name'
-          type='text'
-          value={userName}
-          onChange={handleUserNameChange}
-        />
-      </div>
-      <Button text='Click' handleClick={handleSubmit} />
-    </form>
+    <div>
+      <form action=''>
+        <div>
+          <label htmlFor='user-id'>UserID</label>
+          <input
+            id='user-id'
+            type='text'
+            value={userId}
+            onChange={handleUserIdChange}
+          />
+        </div>
+        <div>
+          <label htmlFor='user-name'>UserName</label>
+          <input
+            id='user-name'
+            type='text'
+            value={userName}
+            onChange={handleUserNameChange}
+          />
+        </div>
+        <Button text='Click' handleClick={handleSubmit} />
+      </form>
+      {displayFlag && <User id={userState.id} name={userState.name} />}
+    </div>
   )
 }
 
