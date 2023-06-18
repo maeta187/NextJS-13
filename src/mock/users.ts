@@ -1,7 +1,7 @@
 export const users = [
-  { name: 'foo', id: 1 },
-  { name: 'bar', id: 2 },
-  { name: 'baz', id: 3 },
-  { name: 'qux', id: 4 },
-  { name: 'quux', id: 5 }
+  { id: 1, name: 'foo' },
+  { id: 2, name: 'bar' },
+  { id: 3, name: 'baz' },
+  { id: 4, name: 'qux' },
+  { id: 5, name: 'quux' }
 ]
