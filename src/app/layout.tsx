@@ -21,8 +21,8 @@ export default function RootLayout({
     <html lang='ja'>
       <body className={inter.className}>
         <div>{children}</div>
-        <div>{team}</div>
-        <div>{analytics}</div>
+        {/* <div>{team}</div>
+        <div>{analytics}</div> */}
       </body>
     </html>
   )

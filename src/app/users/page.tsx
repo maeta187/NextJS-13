@@ -1,21 +1,24 @@
-import type { NextPage } from 'next'
-import { users } from '@/mock'
-import styles from '@/app/users/users.module.css'
+/**
+ * Suspenseを使用することでコンポーネント毎にローディング中の表示を行うことができる
+ */
+import { Suspense } from 'react'
+import UserList from './UserList'
+import OtherUserList from './OtherUserList'
 
-const UsersPage: NextPage = () => {
+const Page = async () => {
   return (
-    <div>
-      <h1 className={styles['users-title']}>UsersPage</h1>
-      <ul>
-        {users.map(({ id, name }) => (
-          <li>
-            <p>UserID:{id}</p>
-            <p>UserName:{name}</p>
-          </li>
-        ))}
-      </ul>
+    <div className='m-4'>
+      <h1 className='text-lg font-bold'>ユーザ一覧</h1>
+      <Suspense fallback={<p>Loading...</p>}>
+        {/* @ts-expect-error Async Server Component */}
+        <UserList />
+      </Suspense>
+      <Suspense fallback={<p>Loading OtherUserList...</p>}>
+        {/* @ts-expect-error Async Server Component */}
+        <OtherUserList />
+      </Suspense>
     </div>
   )
 }
 
-export default UsersPage
+export default Page

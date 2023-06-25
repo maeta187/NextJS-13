@@ -10,7 +10,7 @@ const Page = () => {
       <Link href='/about' className={styles.link} prefetch={false}>
         about
       </Link>
-      <Link href='/users' className={styles.link} prefetch={false}>
+      <Link href='/users' className={styles.link}>
         users
       </Link>
     </nav>
