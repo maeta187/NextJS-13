@@ -14,3 +14,17 @@
 .non-list {
   list-style-type: none;
 }
+
+.btn {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background: #25292f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:first-child {
+  margin-left: 0;
+}

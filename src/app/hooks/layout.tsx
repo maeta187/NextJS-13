@@ -21,6 +21,9 @@ export default function RootLayout({
         <Link href='/hooks/use-state' className={styles.link}>
           useState
         </Link>
+        <Link href='/hooks/use-reducer' className={styles.link}>
+          useReducer
+        </Link>
         <Link href='/hooks/use-effect' className={styles.link}>
           useEffect
         </Link>
