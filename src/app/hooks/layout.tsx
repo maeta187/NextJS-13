@@ -25,8 +25,11 @@ export default function RootLayout({
         <Link href='/hooks' className={styles.link}>
           Hooks
         </Link>
-        <Link href='/hooks/use-state' className={styles.link} prefetch={false}>
+        <Link href='/hooks/use-state' className={styles.link}>
           useState
+        </Link>
+        <Link href='/hooks/use-effect' className={styles.link}>
+          useEffect
         </Link>
       </nav>
       <div>{children}</div>
