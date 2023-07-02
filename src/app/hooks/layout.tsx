@@ -1,9 +1,6 @@
 import '@/styles/globals.css'
-import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import styles from '@/app/hooks/layout.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,13 +8,9 @@ export const metadata = {
 }
 
 export default function RootLayout({
-  children,
-  team,
-  analytics
+  children
 }: {
   children: React.ReactNode
-  team: React.ReactNode
-  analytics: React.ReactNode
 }) {
   return (
     <div>
