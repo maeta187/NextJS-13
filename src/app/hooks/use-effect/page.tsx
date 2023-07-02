@@ -24,7 +24,7 @@ export default function Page() {
 
   return (
     <div>
-      <h3>useState</h3>
+      <h3>useEffect</h3>
       <ul className={styles.list}>
         <li>
           useEffectは関数の実行タイミングをレンダリング後まで遅らせるhooks
@@ -32,6 +32,7 @@ export default function Page() {
         <li>
           副作用の処理（DOMの書き換え、変数代入、API通信などUI構築以外の処理）を関数コンポーネントで扱える
         </li>
+        <li>useEffectはレンダリングが完了した後に非同期的に実行される</li>
         <li>
           第1引数には副作用の処理を記述した関数を、第2引数には副作用の実行タイミングを指定する配列を渡す
         </li>
