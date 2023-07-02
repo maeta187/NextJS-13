@@ -24,6 +24,9 @@ export default function RootLayout({
         <Link href='/hooks/use-effect' className={styles.link}>
           useEffect
         </Link>
+        <Link href='/hooks/use-layout-effect' className={styles.link}>
+          useLayOutEffect
+        </Link>
       </nav>
       <div>{children}</div>
     </div>
