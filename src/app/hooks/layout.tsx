@@ -30,6 +30,9 @@ export default function RootLayout({
         <Link href='/hooks/use-layout-effect' className={styles.link}>
           useLayOutEffect
         </Link>
+        <Link href='/hooks/memo' className={styles.link}>
+          memo
+        </Link>
       </nav>
       <div>{children}</div>
     </div>
