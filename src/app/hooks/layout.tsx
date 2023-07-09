@@ -33,6 +33,9 @@ export default function RootLayout({
         <Link href='/hooks/memo' className={styles.link}>
           memo
         </Link>
+        <Link href='/hooks/use-callback' className={styles.link}>
+          useCallback
+        </Link>
       </nav>
       <div>{children}</div>
     </div>
