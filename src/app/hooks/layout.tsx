@@ -39,6 +39,9 @@ export default function RootLayout({
         <Link href='/hooks/use-memo' className={styles.link}>
           useMemo
         </Link>
+        <Link href='/hooks/use-ref' className={styles.link}>
+          useRef
+        </Link>
       </nav>
       <div>{children}</div>
     </div>
