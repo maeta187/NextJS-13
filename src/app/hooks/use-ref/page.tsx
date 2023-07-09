@@ -1,7 +1,7 @@
 'use client'
 
 import styles from '@/app/hooks/hooks.module.css'
-import { useState, useCallback, memo, useRef } from 'react'
+import { useState, memo, useRef } from 'react'
 
 const VoidComponent = memo(() => {
   console.log('VoidComponent')
