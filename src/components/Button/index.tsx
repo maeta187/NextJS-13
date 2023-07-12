@@ -2,15 +2,16 @@
 
 type ButtonProps = {
   text: string
-  handleClick: () => void
+  type?: 'button' | 'submit' | 'reset'
+  handleClick?: () => void
 }
 
 const Button = (props: ButtonProps) => {
-  const { text, handleClick } = props
+  const { text, type = 'button', handleClick } = props
 
   return (
     <div>
-      <button type='button' onClick={handleClick}>
+      <button type={type} onClick={handleClick}>
         {text}
       </button>
     </div>
