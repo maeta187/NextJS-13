@@ -23,21 +23,22 @@ const Form = () => {
     setUserName(e.target.value)
   }
 
-  const handleSubmit = () => {
-    const result = users.find(
-      (result) => result.id === Number(userId) || result.name === userName
-    )
-    if (result) {
-      setUserState(result)
-    } else {
-      console.warn('User not found')
-    }
-    setDisplayFlag(!!result)
-  }
-
   return (
     <div>
-      <form action=''>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          const result = users.find(
+            ({ id, name }) => id === Number(userId) || name === userName
+          )
+          if (result) {
+            setUserState(result)
+          } else {
+            console.warn('User not found')
+          }
+          setDisplayFlag(!!result)
+        }}
+      >
         <div>
           <label htmlFor='user-id'>UserID</label>
           <input
@@ -56,7 +57,7 @@ const Form = () => {
             onChange={handleUserNameChange}
           />
         </div>
-        <Button text='Click' handleClick={handleSubmit} />
+        <Button text='Click' type='submit' />
       </form>
       {displayFlag && <User id={userState.id} name={userState.name} />}
     </div>
