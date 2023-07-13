@@ -45,6 +45,9 @@ export default function RootLayout({
         <Link href='/hooks/use-context' className={styles.link}>
           useContext
         </Link>
+        <Link href='/hooks/custom-hook' className={styles.link}>
+          customHook
+        </Link>
       </nav>
       <div>{children}</div>
     </div>
