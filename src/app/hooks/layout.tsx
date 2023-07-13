@@ -48,6 +48,9 @@ export default function RootLayout({
         <Link href='/hooks/use-id' className={styles.link}>
           useId
         </Link>
+        <Link href='/hooks/use-transition' className={styles.link}>
+          useTransition
+        </Link>
         <Link href='/hooks/custom-hook' className={styles.link}>
           customHook
         </Link>
