@@ -51,6 +51,9 @@ export default function RootLayout({
         <Link href='/hooks/use-transition' className={styles.link}>
           useTransition
         </Link>
+        <Link href='/hooks/use-deferred-value' className={styles.link}>
+          useDeferredValue
+        </Link>
         <Link href='/hooks/custom-hook' className={styles.link}>
           customHook
         </Link>

@@ -20,7 +20,7 @@ export default function Page() {
       <h3>useTransition</h3>
       <ul className={styles.list}>
         <li>React18系から追加されたフック</li>
-        <li>処理の緊急度を下げる処理</li>
+        <li>処理の緊急度を下げるフック</li>
         <li>
           緊急度の高い処理は、デキストエリア、ドロップダウンなどのユーザーの操作に対して即座に反映されるもの
         </li>
