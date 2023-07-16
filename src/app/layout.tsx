@@ -1,5 +1,6 @@
 import '@/styles/globals.css'
 import { Inter } from 'next/font/google'
+import { CounterProvider } from '@/context/CounterProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang='ja'>
       <body className={inter.className} suppressHydrationWarning={true}>
-        <div>{children}</div>
+        <CounterProvider>{children}</CounterProvider>
         {/* <div>{team}</div>
         <div>{analytics}</div> */}
       </body>
