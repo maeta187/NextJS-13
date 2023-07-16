@@ -29,7 +29,10 @@ const UserList = async () => {
   // await new Promise((resolve) => setTimeout(resolve, 5000))
   // const response = await fetch('http://localhost:3000/api')
   const response = await fetch('http://localhost:3000/api?name=John&id=1', {
-    cache: 'no-store'
+    // cache を無効
+    // cache: 'no-store'
+    // 5秒の間はキャッシュを使用
+    next: { revalidate: 5 }
   })
   if (!response.ok) throw new Error('Error fetching data')
   const users: User[] = await response.json()
