@@ -5,6 +5,11 @@ import { Suspense } from 'react'
 import UserList from './UserList'
 import OtherUserList from './OtherUserList'
 
+export const metadata = {
+  title: 'ユーザの一覧ページ',
+  description: 'JSONPlaceHolderから取得したユーザ一覧です。'
+}
+
 const Page = async () => {
   return (
     <div className='m-4'>
