@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "studio": "pnpm exec prisma studio",
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "5.0.0",
     "@types/node": "20.2.3",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -16,5 +18,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "prisma": "^5.0.0"
   }
 }
