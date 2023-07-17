@@ -1,8 +1,9 @@
 'use client'
 
 import styles from './users.module.css'
+import Link from 'next/link'
 
-type User = {
+export type User = {
   id: string
   name: string
   email: string
@@ -40,7 +41,9 @@ const UserList = async () => {
     <div>
       <ul>
         {users.map((user) => (
-          <li key={user.id}>{user.name}</li>
+          <li key={user.id}>
+            <Link href={`/users/${user.id}`}>{user.name}</Link>
+          </li>
         ))}
       </ul>
 
