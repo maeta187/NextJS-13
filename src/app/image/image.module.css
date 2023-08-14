@@ -14,3 +14,11 @@
 .non-list {
   list-style-type: none;
 }
+
+.is-flex {
+  display: flex;
+}
+
+.content {
+  margin-left: 30px;
+}
