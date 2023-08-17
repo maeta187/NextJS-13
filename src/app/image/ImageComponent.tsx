@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import BackgroundImage from './BackgroundImage'
 
 const ImageComponent = () => {
   return (
@@ -13,6 +14,7 @@ const ImageComponent = () => {
           alt='Sample Image'
         />
       </div>
+      <BackgroundImage />
     </div>
   )
 }
