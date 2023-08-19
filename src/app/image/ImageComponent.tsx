@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import BackgroundImage from './BackgroundImage'
+import ResponsiveImage from './ResponsiveImage'
 
 const ImageComponent = () => {
   return (
@@ -14,6 +15,7 @@ const ImageComponent = () => {
           alt='Sample Image'
         />
       </div>
+      <ResponsiveImage />
       <BackgroundImage />
     </div>
   )

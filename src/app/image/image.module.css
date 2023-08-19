@@ -44,3 +44,23 @@
   padding: 200px 0;
   color: #fff;
 }
+
+.relative {
+  position: relative;
+}
+
+.responsive-image-area {
+  display: flex;
+  /* flex-direction: column;が有効になった時のアスペクト比を保つため */
+  align-items: flex-start;
+}
+
+.responsive-image {
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .responsive-image-area {
+    flex-direction: column;
+  }
+}
