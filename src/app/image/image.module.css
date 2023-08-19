@@ -1,0 +1,66 @@
+.pre {
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 5px;
+  background: #25292f;
+  color: #fff;
+  white-space: pre-wrap;
+}
+
+.list {
+  list-style-position: inside;
+}
+
+.non-list {
+  list-style-type: none;
+}
+
+.is-flex {
+  display: flex;
+}
+
+.content {
+  margin-left: 30px;
+}
+
+.inner {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.bg-img {
+  position: absolute;
+  /* 画面全体を背景にするなら下記を使用 */
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; */
+  height: auto;
+  width: 100%;
+}
+
+.title {
+  font-size: 20px;
+  padding: 200px 0;
+  color: #fff;
+}
+
+.relative {
+  position: relative;
+}
+
+.responsive-image-area {
+  display: flex;
+  /* flex-direction: column;が有効になった時のアスペクト比を保つため */
+  align-items: flex-start;
+}
+
+.responsive-image {
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .responsive-image-area {
+    flex-direction: column;
+  }
+}
