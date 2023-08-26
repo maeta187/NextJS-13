@@ -10,18 +10,22 @@ const ResponsiveImage = () => {
         <div className={'responsive-image-content'}>
           <h2>ResponsiveImage</h2>
         </div>
-        <div className={styles.relative}>
+        <div
+          style={{
+            display: 'block',
+            position: 'relative',
+            width: '200px',
+            height: '300px'
+          }}
+        >
           <Image
+            alt='sample-image'
             src='/sample-image.jpg'
-            alt='Sample Image'
-            width={700}
-            height={475}
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+            sizes='100vw'
+            fill
             style={{
-              width: '100%',
-              height: 'auto'
+              width: '100%'
             }}
-            className={styles['responsive-image']}
           />
         </div>
       </div>
