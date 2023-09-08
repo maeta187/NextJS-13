@@ -148,13 +148,27 @@ const Toast = ({ message, type }: ToastProps) => {
   const handleCloseToast = () => {
     closeToast()
   }
+
+  switch (toastType) {
+    case 'success':
+      return (
+        <div className='relative'>
+          <SuccessToast message={message} onCloseTost={handleCloseToast} />
+        </div>
+      )
+    case 'warning':
+      return (
+        <div className='relative'>
+          <WarningToast message={message} onCloseTost={handleCloseToast} />
+        </div>
+      )
+    case 'error':
   return (
     <div className='relative'>
-      {/* <SuccessToast message={message} handleCloseToast={handleCloseToast} /> */}
-      <WarningToast message={message} handleCloseToast={handleCloseToast} />
-      {/* <ErrorToast message={message} handleCloseToast={handleCloseToast} /> */}
+          <ErrorToast message={message} onCloseTost={handleCloseToast} />
     </div>
   )
+}
 }
 
 export default Toast
