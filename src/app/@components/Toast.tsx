@@ -2,7 +2,7 @@ import { useToast } from '@/context/ToastProvider'
 
 type ToastProps = {
   message: string
-  type: 'success' | 'warning' | 'error'
+  toastType: 'success' | 'warning' | 'error'
 }
 
 const SuccessToast = ({
@@ -143,7 +143,7 @@ const ErrorToast = ({
   )
 }
 
-const Toast = ({ message, type }: ToastProps) => {
+const Toast = ({ message, toastType }: ToastProps) => {
   const { closeToast } = useToast()
 
   const handleCloseToast = () => {
@@ -164,12 +164,12 @@ const Toast = ({ message, type }: ToastProps) => {
         </div>
       )
     case 'error':
-  return (
-    <div className='relative'>
+      return (
+        <div className='relative'>
           <ErrorToast message={message} onCloseTost={handleCloseToast} />
-    </div>
-  )
-}
+        </div>
+      )
+  }
 }
 
 export default Toast
