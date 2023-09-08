@@ -144,7 +144,8 @@ const ErrorToast = ({
 }
 
 const Toast = ({ message, type }: ToastProps) => {
-  const { showToast, closeToast } = useToast()
+  const { closeToast } = useToast()
+
   const handleCloseToast = () => {
     closeToast()
   }
