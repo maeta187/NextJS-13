@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState, useEffect } from 'react'
 import Toast from '@/app/@components/Toast'
 
 type ToastType = 'success' | 'warning' | 'error'
@@ -28,16 +28,19 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     setToastMessage(message)
     setToastType(type)
     setShowToast(true)
-
-    // 5秒後にToastを非表示にする
-    setTimeout(() => {
-      setShowToast(false)
-    }, 5000)
   }
 
   const closeToast = () => {
     setShowToast(false)
   }
+
+  useEffect(() => {
+    if (!isShowToast) return
+    // 5秒後にToastを非表示にする
+    setTimeout(() => {
+      setShowToast(false)
+    }, 5000)
+  }, [isShowToast])
 
   return (
     <ToastContext.Provider value={{ showToast, closeToast }}>
