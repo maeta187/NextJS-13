@@ -7,10 +7,10 @@ type ToastProps = {
 
 const SuccessToast = ({
   message,
-  handleCloseToast
+  onCloseTost
 }: {
   message: string
-  handleCloseToast: () => void
+  onCloseTost: () => void
 }) => {
   return (
     <div className='animate-fade-out absolute top-0 left-1/2 -translate-x-2/4 w-72 px-2 py-4 rounded-xl text-green-700 bg-green-200 border-green-700 flex'>
@@ -31,7 +31,7 @@ const SuccessToast = ({
         </svg>
       </div>
       <p className='pl-1'>{message}</p>
-      <div className='ml-auto cursor-pointer' onClick={handleCloseToast}>
+      <div className='ml-auto cursor-pointer' onClick={onCloseTost}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
@@ -53,10 +53,10 @@ const SuccessToast = ({
 
 const WarningToast = ({
   message,
-  handleCloseToast
+  onCloseTost
 }: {
   message: string
-  handleCloseToast: () => void
+  onCloseTost: () => void
 }) => {
   return (
     <div className='animate-fade-out absolute top-0 left-1/2 -translate-x-2/4 w-72 px-2 py-4 rounded-xl text-yellow-700 bg-yellow-200 border-yellow-700 flex'>
@@ -77,7 +77,7 @@ const WarningToast = ({
         </svg>
       </div>
       <p className='pl-1'>{message}</p>
-      <div className='ml-auto cursor-pointer' onClick={handleCloseToast}>
+      <div className='ml-auto cursor-pointer' onClick={onCloseTost}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
@@ -99,10 +99,10 @@ const WarningToast = ({
 
 const ErrorToast = ({
   message,
-  handleCloseToast
+  onCloseTost
 }: {
   message: string
-  handleCloseToast: () => void
+  onCloseTost: () => void
 }) => {
   return (
     <div className='animate-fade-out absolute top-0 left-1/2 -translate-x-2/4 w-72 px-2 py-4 rounded-xl text-red-700 bg-red-200 border-red-700 flex'>
@@ -123,7 +123,7 @@ const ErrorToast = ({
         </svg>
       </div>
       <p className='pl-1'>{message}</p>
-      <div className='ml-auto cursor-pointer' onClick={handleCloseToast}>
+      <div className='ml-auto cursor-pointer' onClick={onCloseTost}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
