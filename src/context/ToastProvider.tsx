@@ -27,8 +27,8 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   const showToast = (message: string, type: ToastType = 'success') => {
     setToastMessage(message)
     setToastType(type)
-
     setShowToast(true)
+
     // 5秒後にToastを非表示にする
     setTimeout(() => {
       setShowToast(false)
