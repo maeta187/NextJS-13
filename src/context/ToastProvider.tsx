@@ -19,7 +19,7 @@ export const useToast = () => {
   return useContext(ToastContext)
 }
 
-export function ToastProvider({ children }: { children: React.ReactNode }) {
+export const ToastProvider = ({ children }: { children: React.ReactNode }) => {
   const [toastMessage, setToastMessage] = useState<string>('')
   const [toastType, setToastType] = useState<ToastType>('success')
   const [isShowToast, setShowToast] = useState<boolean>(false)
