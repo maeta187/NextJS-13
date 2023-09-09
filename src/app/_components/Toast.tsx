@@ -13,7 +13,12 @@ const SuccessToast = ({
   onCloseTost: () => void
 }) => {
   return (
-    <div className='animate-fade-out absolute top-0 left-1/2 -translate-x-2/4 w-72 px-2 py-4 rounded-xl text-green-700 bg-green-200 border-green-700 flex'>
+    <div
+      className='
+        animate-fade-out absolute top-5 left-1/2 -translate-x-2/4 w-72 px-2 py-4 rounded-xl flex
+        text-green-700 bg-green-200 border-green-700
+      '
+    >
       <div>
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -59,7 +64,12 @@ const WarningToast = ({
   onCloseTost: () => void
 }) => {
   return (
-    <div className='animate-fade-out absolute top-0 left-1/2 -translate-x-2/4 w-72 px-2 py-4 rounded-xl text-yellow-700 bg-yellow-200 border-yellow-700 flex'>
+    <div
+      className='
+        animate-fade-out absolute top-5 left-1/2 -translate-x-2/4 w-72 px-2 py-4 rounded-xl flex
+        text-yellow-700 bg-yellow-200 border-yellow-700
+      '
+    >
       <div>
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -105,7 +115,11 @@ const ErrorToast = ({
   onCloseTost: () => void
 }) => {
   return (
-    <div className='animate-fade-out absolute top-0 left-1/2 -translate-x-2/4 w-72 px-2 py-4 rounded-xl text-red-700 bg-red-200 border-red-700 flex'>
+    <div
+      className='
+        animate-fade-out absolute top-5 left-1/2 -translate-x-2/4 w-72 px-2 py-4 rounded-xl flex
+        text-red-700 bg-red-200 border-red-700'
+    >
       <div>
         <svg
           xmlns='http://www.w3.org/2000/svg'
