@@ -6,7 +6,7 @@ import Toast from '@/app/_components/Toast'
 type ToastType = 'success' | 'warning' | 'error'
 
 interface ToastContext {
-  showToast: (message: string, type?: ToastType) => void
+  showToast: (message: string, type: ToastType) => void
   closeToast: () => void
 }
 
@@ -24,7 +24,7 @@ export const ToastProvider = ({ children }: { children: React.ReactNode }) => {
   const [toastType, setToastType] = useState<ToastType>('success')
   const [isShowToast, setShowToast] = useState<boolean>(false)
 
-  const showToast = (message: string, type: ToastType = 'success') => {
+  const showToast = (message: string, type: ToastType) => {
     setToastMessage(message)
     setToastType(type)
     setShowToast(true)
