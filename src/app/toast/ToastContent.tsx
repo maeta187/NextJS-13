@@ -13,7 +13,7 @@ const ToastContent = () => {
   }
   return (
     <div>
-      <div className='text-center w-9/12 my-0 mx-auto pt-28'>
+      <div className='text-center w-9/12 my-0 mx-auto pt-36'>
         <button
           className='p-2 border-2 rounded-xl text-green-700 bg-green-200 border-green-700'
           type='button'
