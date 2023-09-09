@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect } from 'react'
-import Toast from '@/app/@components/Toast'
+import Toast from '@/app/_components/Toast'
 
 type ToastType = 'success' | 'warning' | 'error'
 
