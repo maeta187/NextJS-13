@@ -1,12 +1,12 @@
 'use client'
 
-import { createContext, useContext, useState, useEffect } from 'react'
+import { createContext, useContext, useState, useEffect, useRef } from 'react'
 import Toast from '@/app/_components/Toast'
 
 type ToastType = 'success' | 'warning' | 'error'
 
 interface ToastContext {
-  showToast: (message: string, type?: ToastType) => void
+  showToast: (message: string, type: ToastType) => void
   closeToast: () => void
 }
 
@@ -19,25 +19,30 @@ export const useToast = () => {
   return useContext(ToastContext)
 }
 
-export function ToastProvider({ children }: { children: React.ReactNode }) {
+export const ToastProvider = ({ children }: { children: React.ReactNode }) => {
   const [toastMessage, setToastMessage] = useState<string>('')
   const [toastType, setToastType] = useState<ToastType>('success')
   const [isShowToast, setShowToast] = useState<boolean>(false)
+  const timer = useRef<ReturnType<typeof setTimeout>>()
 
-  const showToast = (message: string, type: ToastType = 'success') => {
+  const showToast = (message: string, type: ToastType) => {
+    // すでに実行されているsetTimeout()をキャンセルする
+    clearTimeout(timer.current)
     setToastMessage(message)
     setToastType(type)
     setShowToast(true)
   }
 
   const closeToast = () => {
+    // すでに実行されているsetTimeout()をキャンセルする
+    clearTimeout(timer.current)
     setShowToast(false)
   }
 
   useEffect(() => {
     if (!isShowToast) return
     // 5秒後にToastを非表示にする
-    setTimeout(() => {
+    timer.current = setTimeout(() => {
       setShowToast(false)
     }, 5000)
   }, [isShowToast])
